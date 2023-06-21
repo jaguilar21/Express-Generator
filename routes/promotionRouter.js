@@ -61,7 +61,7 @@ promotionRouter.route('/:promotionId')
 		Promotion.findByIdAndUpdate(req.params.promotionId, {
 			$set: req.body
 		}, { new: true })
-			.then(promtion => {
+			.then(promotion => {
 				res.statusCode = 200;
 				res.setHeader('Content-Type', 'application/json');
 				res.json(promotion);
